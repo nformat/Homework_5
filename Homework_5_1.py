@@ -27,11 +27,7 @@ class Person():
         return f"\nObject {self.__class__}\nfull_name: {self.full_name}, birthday: {self.birthday}"
 
 
-p = Person("Jim Bean", 1985)
-print("Имя: ", p.get_name())
-print("Фамилия: ", p.get_sername())
-print("Лет:", p.get_year())
-print(p)
+
 ###############################
 
 class Employee(Person):
@@ -56,11 +52,6 @@ class Employee(Person):
                f" {self.position}, exp: {self.exp}, salary: {self.salary}"
 
 
-p2 = Employee("Scott Redle", 1980, "Administrator", 5, 3000)
-p2.up_sal(20)
-
-print("\nКласс Employee:\n", p2.full_name+" на должности ", p2.exp_position()+" получает ", p2.salary)
-print(p2)
 
 ##############################
 class ITEmployee(Employee):
@@ -78,11 +69,24 @@ class ITEmployee(Employee):
         return f"\nObject {self.__class__}\nfull_name: {self.full_name}, birthday: {self.birthday}, position:" \
                f" {self.position}, exp: {self.exp}, salary: {self.salary}, skills: {self.skills}"
 
-p3 = ITEmployee("John Dou", 1975, "Analitic", 1, 2000)
-p3.add_skill("SIEM", "DLP", "CRM")
+if __name__ == "__main__":
+    p = Person("Jim Bean", 1985)
+    print("Имя: ", p.get_name())
+    print("Фамилия: ", p.get_sername())
+    print("Лет:", p.get_year())
+    print(p)
 
-print("\nКласс ITEmployee:\nУ ", p3.full_name+" следующие навыки:", *p3.skills)
-print(p3)
+    p2 = Employee("Scott Redle", 1980, "Administrator", 5, 3000)
+    p2.up_sal(20)
+
+    print("\nКласс Employee:\n", p2.full_name+" на должности ", p2.exp_position()+" получает ", p2.salary)
+    print(p2)
+
+    p3 = ITEmployee("John Dou", 1975, "Analitic", 1, 2000)
+    p3.add_skill("SIEM", "DLP", "CRM")
+
+    print("\nКласс ITEmployee:\nУ ", p3.full_name+" следующие навыки:", *p3.skills)
+    print(p3)
 
 
 
