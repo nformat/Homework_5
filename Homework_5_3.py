@@ -57,25 +57,21 @@ class Tre_tests(unittest.TestCase):
 
 class Tretype_tests(unittest.TestCase):
 
-
     def test_zero(self):
         res = tretype(0, 0, 0)
-        self.assertEquals(res, "несуществует")
-
+        self.assertEqual(res, "несуществует")
 
     def test_type1(self):
         res = tretype(2, 2, 2)
-        self.assertEquals(res, "равносторний")
+        self.assertEqual(res, "равносторний")
 
     def test_type2(self):
         res = tretype(2, 3, 2)
-        self.assertEquals(res, "равнобедренный")
-
+        self.assertEqual(res, "равнобедренный")
 
     def test_type3(self):
         res = tretype(2, 3, 4)
-        self.assertEquals(res, "разностороний")
-
+        self.assertEqual(res, "разностороний")
 
     def test_isnotnone(self):
         res = tre(1, 3, 1)

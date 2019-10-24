@@ -38,7 +38,7 @@ class Employee(Person):
         self.exp = exp
         self.salary = salary
 
-    def exp_position (self):
+    def exp_position(self):
         pref = "Junior" if self.exp < 3 else "Middle" if self.exp >= 3 and self.exp < 6 else "Senior "
         return f"{pref} {self.position}"
 
@@ -70,6 +70,7 @@ class ITEmployee(Employee):
                f" {self.position}, exp: {self.exp}, salary: {self.salary}, skills: {self.skills}"
 
 if __name__ == "__main__":
+
     p = Person("Jim Bean", 1985)
     print("Имя: ", p.get_name())
     print("Фамилия: ", p.get_sername())
